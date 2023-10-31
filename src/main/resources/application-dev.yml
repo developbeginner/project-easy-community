@@ -1,0 +1,20 @@
+# application-dev.yml
+# this is development profile used in local env
+
+# Mybatis settings
+mybatis:
+  configuration:
+    multiple-result-sets-enabled: false
+    map-underscore-to-camel-case: true
+    call-setters-on-nulls: true
+    jdbc-type-for-null: varchar
+    default-fetch-size: 500
+  mapper-locations: classpath:mapper/**/*.xml
+
+# DB datasource settings
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:maraidb://localhost:3306/easy_community
+    username: easy_community_admin
+    password: password
