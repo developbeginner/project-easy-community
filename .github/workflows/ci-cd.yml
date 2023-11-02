@@ -43,7 +43,7 @@ jobs:
     steps:
       # build docker image
       - name: build docker image
-        run: docker build -f Dockerfile -t ${{ secrets.DOCKER_USERNAME }}/${{ env.PROJECT_NAME }} .
+        run: docker build -f DockerFile -t ${{ secrets.DOCKER_USERNAME }}/${{ env.PROJECT_NAME }} .
 
       # login to dockerhub
       - name: login to dockerhub
