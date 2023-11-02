@@ -1,0 +1,25 @@
+# application-dev.yml
+# this is common profile used in every env
+
+spring:
+  # Spring Devtools settings
+  devtools:
+    livereload:
+      enabled: true
+  web:
+    resources:
+      static-locations: file:src/main/resources/static/
+
+  # Thymeleaf settings
+  thymeleaf:
+    cache: false
+
+# Mybatis settings
+mybatis:
+  configuration:
+    multiple-result-sets-enabled: false
+    map-underscore-to-camel-case: true
+    call-setters-on-nulls: true
+    jdbc-type-for-null: varchar
+    default-fetch-size: 500
+  mapper-locations: classpath:mapper/**/*.xml
