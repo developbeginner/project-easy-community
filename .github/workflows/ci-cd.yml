@@ -57,7 +57,7 @@ jobs:
         run: docker push ${{ secrets.DOCKER_USERNAME }}/${{ env.PROJECT_NAME }}
 
   docker-pull:
-    needs: docker
+    needs: docker-push
     runs-on: self-hosted
     steps:
       # pull new image
