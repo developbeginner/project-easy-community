@@ -37,10 +37,6 @@ jobs:
       - name: build project
         run: ./gradlew build
 
-  docker-push:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
       # build docker image
       - name: build docker image
         run: docker build -f Dockerfile -t ${{ secrets.DOCKER_USERNAME }}/${{ env.PROJECT_NAME }} .
@@ -56,8 +52,8 @@ jobs:
       - name: push docker image
         run: docker push ${{ secrets.DOCKER_USERNAME }}/${{ env.PROJECT_NAME }}
 
-  docker-pull:
-    needs: docker-push
+  deploy:
+    needs: build
     runs-on: self-hosted
     steps:
       # pull new image
