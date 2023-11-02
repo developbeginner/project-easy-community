@@ -1,6 +1,19 @@
 # application-dev.yml
 # this is common profile used in every env
 
+spring:
+  # Spring Devtools settings
+  devtools:
+    livereload:
+      enabled: true
+  web:
+    resources:
+      static-locations: file:src/main/resources/static/
+
+  # Thymeleaf settings
+  thymeleaf:
+    cache: false
+
 # Mybatis settings
 mybatis:
   configuration:

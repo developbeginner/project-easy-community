@@ -17,7 +17,7 @@ jobs:
       - name: checkout resources
         uses: actions/checkout@v3
 
-      # write secrets in production properties
+      # write secrets in production yml
       - name: modify application-prod.properties
         run: |
           echo "${{ secrets.APPLICATION_PROD_YML }}" | base64 --decode >> ./src/main/resources/application-prod.yml
