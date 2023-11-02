@@ -62,7 +62,7 @@ jobs:
     steps:
       # pull new image
       - name: pull docker image
-        run: sudo docker pull ${{ secrets.DOCKER_USERNAME }}/${{ env.PROJECT/NAME }}
+        run: sudo docker pull ${{ secrets.DOCKER_USERNAME }}/${{ env.PROJECT_NAME }}
 
       # stop old container
       - name: stop old container
