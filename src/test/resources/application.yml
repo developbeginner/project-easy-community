@@ -1,4 +1,4 @@
-# application.yml
+# application.properties
 # this is test profile used in test env
 
 # DB datasource settings

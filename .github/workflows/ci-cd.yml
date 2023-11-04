@@ -17,10 +17,10 @@ jobs:
       - name: checkout resources
         uses: actions/checkout@v3
 
-      # write secrets in production yml
+      # write secrets in production properties
       - name: modify application-prod.properties
         run: |
-          echo "${{ secrets.APPLICATION_PROD_YML }}" | base64 --decode >> ./src/main/resources/application-prod.yml
+          echo "${{ secrets.APPLICATION_PROD }}" | base64 --decode >> ./src/main/resources/application-prod.properties
 
       # setup java development kit 17
       - name: setup jdk 17

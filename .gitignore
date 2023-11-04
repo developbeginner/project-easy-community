@@ -37,4 +37,4 @@ out/
 .vscode/
 
 ### development files ###
-application-dev.yml
+application-dev.properties
