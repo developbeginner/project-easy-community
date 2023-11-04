@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+    This is Register Page
+    <form method="post" th:action="@{~/member/register}" th:object="${member}">
+        <th:block>
+            <label for="email">이메일</label>
+            <input type="text" id="email" th:field="*{email}">
+        </th:block>
+        <th:block>
+            <label for="password">패스워드</label>
+            <input type="password" id="password" th:field="*{password}">
+        </th:block>
+        <th:block>
+            <label for="nickname">닉네임</label>
+            <input type="text" id="nickname" th:field="*{nickname}">
+        </th:block>
+        <button type="submit">회원가입</button>
+    </form>
+    <script th:inline="javascript">
+        let message = [[${message}]];
+        if (message != null) {
+            alert(message);
+        }
+    </script>
+</body>
+</html>

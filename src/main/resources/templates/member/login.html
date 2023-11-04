@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    This is Login Page
+    <form method="post" th:action="@{~/member/login}" th:object="${member}">
+        <th:block>
+            <label for="email">이메일</label>
+            <input type="text" id="email" th:field="*{email}">
+        </th:block>
+        <th:block>
+            <label for="password">패스워드</label>
+            <input type="password" id="password" th:field="*{password}">
+        </th:block>
+        <button type="submit">로그인</button>
+    </form>
+    <script th:inline="javascript">
+        let message = [[${message}]];
+        if (message != null) {
+            alert(message);
+        }
+    </script>
+</body>
+</html>
