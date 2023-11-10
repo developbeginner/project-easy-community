@@ -22,6 +22,10 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test:3.1.5")
     // Spring Boot Starter Thymeleaf 3.1.5
     implementation("org.springframework.boot:spring-boot-starter-thymeleaf:3.1.5")
+    // Spring Boot Starter Validation 3.1.5
+    implementation("org.springframework.boot:spring-boot-starter-validation:3.1.5")
+    // Spring Boot Starter Security 3.1.5
+    implementation("org.springframework.boot:spring-boot-starter-security:3.1.5")
     // Spring Boot Devtools 3.1.5
     implementation("org.springframework.boot:spring-boot-devtools:3.1.5")
     // MariaDB Java Client 3.2.0
@@ -32,6 +36,9 @@ dependencies {
     implementation("org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.2")
     // Lombok 1.18.30
     compileOnly("org.projectlombok:lombok:1.18.30")
+    annotationProcessor("org.projectlombok:lombok:1.18.30")
+    // Thymeleaf Extras Spring Security 6
+    implementation("org.thymeleaf.extras:thymeleaf-extras-springsecurity6:3.1.2.RELEASE")
 }
 
 tasks.withType<Test> {

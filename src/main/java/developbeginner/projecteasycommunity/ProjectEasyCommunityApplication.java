@@ -4,7 +4,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@MapperScan("developbeginner.projecteasycommunity.mapper")
+@MapperScan("developbeginner.projecteasycommunity.dao")
 @SpringBootApplication
 public class ProjectEasyCommunityApplication {
 

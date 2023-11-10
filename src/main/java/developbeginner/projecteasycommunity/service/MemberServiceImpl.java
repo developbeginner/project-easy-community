@@ -1,7 +1,7 @@
 package developbeginner.projecteasycommunity.service;
 
-import developbeginner.projecteasycommunity.mapper.MemberMapper;
-import developbeginner.projecteasycommunity.vo.Member;
+import developbeginner.projecteasycommunity.dao.MemberMapper;
+import developbeginner.projecteasycommunity.dto.MemberDTO;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -13,15 +13,7 @@ public class MemberServiceImpl implements MemberService {
     }
 
     @Override
-    public void register(Member member) {
-        memberMapper.insert(member);
-    }
-
-    @Override
-    public void login(Member member) {
-        boolean result = memberMapper.checkMemberExist(member);
-        if (!result) {
-            throw new IllegalArgumentException("아이디나 비밀번호가 틀렸습니다.");
-        }
+    public void register(MemberDTO.MemberRequestDTO member) {
+        memberMapper.insertMember(member);
     }
 }
